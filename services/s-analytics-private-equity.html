@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<!--[if IE 7]>         <html class="no-js lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <!-- Document -->
+  <title>Analytics For Private Equity</title>
+  <!-- Viewport -->
+  <meta name="viewport" content="width=device-width">
+
+  <!-- Stylesheets -->
+<!--   <link rel="stylesheet" href="./css/style.css" />
+ -->
+
+  <!-- Favicons -->
+  <link href="images/s-risk-adv-logo.png" rel="shortcut icon">
+  <!-- Google Fonts -->
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Montserrat:300,400">
+  <!-- Bootstrap -->
+  <link rel='dns-prefetch' href='//s.w.org' /><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <!-- Adding Font Awesome -->
+
+<!--   <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+ -->
+  <script src="https://use.fontawesome.com/b0195e34ca.js" async></script>
+
+  <!-- This site is optimized with the Yoast SEO plugin v4.7 - https://yoast.com/wordpress/plugins/seo/ -->
+    <meta name="description" content="At Risk Advisors, we combine private equity industry experience with data science expertise to enhance investment decision-making, enabling data-driven insights both pre and post deal across a wide variety of industries."/>
+    <!-- <meta name="robots" content="noodp"/> -->
+    <link rel="canonical" href="https://riskadvisorsinc.com/" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Risk Adv - Private Equity Analytics" />
+    <meta property="og:description" content="At Risk Advisors, we combine private equity industry experience with data science expertise to enhance investment decision-making, enabling data-driven insights both pre and post deal across a wide variety of industries." />
+    <meta property="og:url" content="https://riskadvisorsinc.com/" />
+  <!-- <meta property="og:site_name" content="Risk Advisors" /> -->
+  <!-- / Yoast SEO plugin. -->
+<style type="text/css">
+img.wp-smiley,
+img.emoji {display: inline !important; border: none !important; box-shadow: none !important; height: 1em !important; width: 1em !important; margin: 0 .07em !important; vertical-align: -0.1em !important; background: none !important; padding: 0 !important;}
+</style>
+
+<style>
+  html {scroll-behavior: smooth;}
+  body {line-height: 1.5; font-family: 'Montserrat', 'Helvetica', sans-serif; font-size: 18px; font-weight: 300; color: #575C75; width:100%; height:auto;}
+  h2-web {font-family: 'Montserrat', 'Helvetica', sans-serif; font-size: 28px; color: #000; padding-bottom: 10px; display: inline-block; margin-top: 20px; margin-bottom: 0px;}
+  h3-web {font-size:28px; border-bottom: 1px solid #fdb84d; color: #000; margin-top: 20px; padding-bottom: 10px;}
+  label-web {font-family: 'Montserrat', 'Helvetica', sans-serif; font-size: 16px; margin-top: 10px;}
+  .navbar { background-color: #fff; overflow: none; text-align: right; min-height: 40px; padding-top: 5px; z-index: 9999;}
+  .navbar a { line-height: 3.5em; color: #3B3838; background-color: transparent; text-align: center; padding: 30px 10px 8px 10px; text-decoration: none; font-size: 14px; font-family: 'Montserrat', sans-serif;}
+  .navbar-nav>li>a {padding-top: 12px; padding-bottom: 10px}
+  .navbar-nav>li>a:hover {border-bottom: 1px solid #fdb84d;} /*#64ABFC*/
+  .container-fluid { -webkit-box-sizing:content-box; -moz-box-sizing:content-box; box-sizing:content-box; max-width:100%; padding-left:15%; padding-right:15%}
+  .site-hero { position: fixed; opacity: inherit; background-attachment: fixed; background-position: center; background-repeat: no-repeat; background-size: cover; background-image: url("images/s-main-nyskyline.jpg"); max-width: 100%; margin-top: 30px}
+  .container-hero { max-width:100%;}
+  .landing-section-web { padding-bottom:20px; padding-top:20px; }
+  .col-md-3 {background: transparent; padding-left: 5%; padding-right: 5%;}
+  .col-md-3 i { padding-top: 10%; padding-bottom: 10%; padding-right: 0%;}
+  .col-md-3 p { color: #3B3838; padding-bottom: 10%; padding-top: 5%;}
+  .grid-image {width: 80px; height: 80px; margin-top: 32px; opacity: 0.7}
+  .circle { display: inline-block; width: 6em; height: 6em; border-radius: 60px; background: #fff}
+  .col-md-5 {margin:2% 4% 0% 4%; background-color: #f9f9f9; transition: all 0.3s ease-in-out 0s}
+  .col-md-5:hover {box-shadow: 5px 0px 40px rgba(0,0,0, .1)}
+  .col-md-4 {padding-bottom: 20px;}
+  .col-md-6 {padding-left: 20px; padding-right: 20px;}
+  .learn-more { color:#64ABFC; text-decoration:none; border:none; display: inline-block; vertical-align: middle; transform: perspective(1px) translateZ(0); position: relative; padding-right: 2.2em; margin-left:0px; transition-duration: 0.1s;}
+  .learn-more:hover { text-decoration: none; color:#fdb84d;}
+  .learn-more:hover::after { content: "\f105"; font-family: FontAwesome; position: absolute; right: 1em; padding: 0 1px; transform: translateZ(0); transition-duration: 0.1s; transition-property: transform; transition-timing-function: ease-out;}
+  .features-image { background-size: contain; background-repeat: no-repeat; background-position: center; transition: all .3s; max-height: 300px; border: 1px solid lightgrey;}
+  .panel { border: solid 1px #edf5ff; border-radius:0 !important; transition: box-shadow 0.5s; font-size: 15px;}
+  .panel-body {font-size:14px}
+  .panel:hover {box-shadow: 5px 0px 40px rgba(0,0,0, .1);}
+  .panel-heading-web {color: #3B3838; font-size: 24px; background-color: #edf5ff !important; padding: 20px; border-bottom: 1px solid transparent; border-top-left-radius: 0px; border-top-right-radius: 0px; border-bottom-left-radius: 0px; border-bottom-right-radius: 0px;}
+  .panel-footer {background-color: white !important; height: 145px; border-top: 1px solid #edf5ff}
+  .panel-footer p {font-size: 12px;}
+  .panel-button {display:inline-block; vertical-align:middle; white-space:nowrap; font-family:'Montserrat', 'Helvetica', sans-serif; font-size: 17px; color: #6E0022; text-decoration: none; border: 3px solid #6E0022; border-radius: 0px; line-height:2.5; padding-right:1.5em; padding-left:1.5em; background-color: #fff;
+    width: 135px; text-align: center; position: relative;}
+  .panel-button:hover { background: #6E0022; border: 3px solid #6E0022; color: #fff; text-decoration: none;}
+  .panel-footer .btn { margin: 15px 0; border: 1px solid #F89C67; background-color: #fff !important; color: #F89C67;}
+  .panel-footer .btn:hover { border: 1px solid #F89C67; background-color: #F89C67 !important; color: #fff;}
+  .fa { display: inline-block; font-family: "FontAwesome";}
+  .fa-2x { font-size: 2em;}
+  .feature-header { font-size: 22px; transform: translateY(20%); color: #3B3838;}
+  .site-footer-list {padding-top: 24px; padding-top: 1.5rem; padding-bottom: 24px; padding-bottom: 1.5rem; background-color: #343434; color: white; font-family: 'Montserrat', Helvetica, sans-serif; font-size: 14px; line-height: 10px;}
+  .site-footer a p {color: #FDB84D;text-decoration: none;}
+  .site-footer a:hover p:hover{color: #e18a03;}
+  .box1 {  background-color: transparent; padding:5%; text-align: left;}
+  .box2 {padding: 5% 4%; background-color: white; color: #82a0be; font-size: 17px; border: 1px solid #82a0be;}
+  .box2:hover {color: #64ABFC; background-color: #fff; text-decoration: none; border: 1px solid #64ABFC}
+  @media only screen and (max-width:736px) { #menu-toggle:not(:checked) + .navbar-nav { display: none;}
+    .site-hero { width: 100%; margin-left:0px; font-size: 15px}
+    .container-hero { width: 100%; margin: 0rem;}
+    .container-fluid {padding-left: 1.5em; padding-right: 1.5em;}
+    .button-web { font-size: 14px; width: 120px;}
+    .button-login {font-size: 14px;width: 120px;}
+    .navbar { width: 100%; min-height: 40px;}
+    .navbar a {font-size: 12px;}
+    p {font-size: 15px;}
+    footer {height: 119px;}
+    footer p {font-size: 11px}
+    footer a {font-size: 11px}
+    footer .container-fluid {padding-left: 10px; padding-right: 10px;}
+    .panel-body {height: auto;max-width: 500px;}}
+  @media only screen and (min-width:768px) {.panel-body {height: 470px;}; footer {height: 130px} }
+  @media only screen and (min-width:800px) {.panel-body {font-size: 14px;height: 490px;};}
+</style>
+
+<!-- Analytics -->
+<!-- <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-2903848-2', 'auto');
+  ga('send', 'pageview');
+</script>
+ -->
+
+</head>
+
+<!-- SITE CONTENT -->
+<body>
+
+<header class="site-header">
+
+ <nav class="navbar navbar-default navbar-fixed-top" style="border:1px solid lightgrey;">
+  <div class="container-fluid"  style="margin-right: -100px">
+  <div class="navbar-header"><a href="https://riskadvisorsinc.com/" class="navbar-brand" style="padding:0%; text-decoration:none; border-bottom:none"><img src="images/s-risk-adv-logo.png" alt="Risk Advisors" style="width:120px; float:left; border:none; margin-left:-100px"/></a><label for="menu-toggle" class="navbar-toggle collapsed">
+   <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></label></div>
+   <input type="checkbox" id="menu-toggle" class="hidden"/>
+   <ul class="nav navbar-nav navbar-right"><li><a class="nav-item" href="#about" style="color:#3B3838">About</a></li><li><a class="nav-item" href="#features" style="color:#3B3838">Services</a></li>
+	<li><a class="nav-item" href="#pricing" style="color:#3B3838;">Case Studies</a></li>
+	<li><a class="nav-item" href="#form" style="color:#3B3838; margin-right:5px; margin-left:5px">Contact Us</a></li><ul></div></nav>
+
+</header>
+
+<div role="main">
+
+ <div class="site-hero" id="home" style="display:block; position:relative; z-index:0">
+  <div class="container-fluid" style="padding:20% 15%; background-color: rgba(0,0,0,0.5); ">
+    <p style="font-family:'Montserrat'; color:#fff; font-size:70px; font-weight: bold; letter-spacing: 0.5px">Analytics For Private Equity</p>
+    <p style="font-family:'Montserrat'; color:#fff; font-size:30px; font-weight: 400; margin-top: -3px; letter-spacing: 1px">Find Investments. Extract Value. Enhance Performance.</p>
+ 	<!-- <div style="margin-left: 0px"><a href="#form" class="button-web">Sign Up</a><a href="https://radientanalytics.com/app/" class="button-login">Login</a></div> -->
+ </div>
+</div>
+
+<div class="home-body">
+
+<!-- ABOUT -->
+<section class="landing-section-web" style="padding-top:0px">
+
+ <div class="container-fluid" id="about"><br><br>
+
+ 	<div class="col-md-12">
+	  <h2-web style="margin-top: 20px">On-Demand analysis to rapidly identify and evaluate investment opportunities and to make strategic operating decisions that maximize value</h2-web><br>
+	  <br>
+	  <p>We combine private equity industry experience with data science expertise to enhance investment decision-making for pre-deal analysis and post-deal value maximization. Our solutions employ sophisticated artificial intelligence and machine learning technologies, with powerful visualizations. We enable you to find investment opportunities, dig deeper analysis on prospects, and inform operating decision to maximize portfolio company value.</p>
+ 	</div>
+
+ </div>
+
+</div>
+
+<div class="container-fluid text-center" style="background-color: #fff8f3;"><br>
+
+ <div class="col-md-3 col-sm-6" style="font-size:20px;">
+ 	<p style="vertical-align: middle; font-size:50px; padding-bottom: 0%">10+</p>
+ 	<p style="border-top: 1px solid #c3d2e0;">Countries</p>
+ </div><!-- <p style="padding-top:0px; margin-bottom:0px">Grade Analysis</p></div> -->
+ <div class="col-md-3 col-sm-6" style="font-size:20px;">
+ 	<p style="vertical-align: middle; font-size:50px; padding-bottom: 0%">6</p>
+ 	<p style="border-top: 1px solid #c3d2e0">Sectors</p>
+ </div><!-- <p style="padding-top:0px; margin-bottom:0px">Data Management</p></div> -->
+ <div class="col-md-3 col-sm-6" style="font-size:20px;">
+ 	<p style="vertical-align: middle; font-size:50px; padding-bottom: 0%">20+</p>
+ 	<p style="border-top: 1px solid #c3d2e0">Portfolio Companies</p>
+ </div><!-- <p style="padding-top:0px; margin-bottom:0px">Operational Errors</p></div> -->
+ <div class="col-md-3 col-sm-6" style="font-size:20px;">
+	<p style="vertical-align: middle; font-size:50px; padding-bottom: 0%">$3bn</p>
+	<p style="border-top: 1px solid #c3d2e0">Enterprise Value</p>
+ </div><!-- <p style="padding-top:0px; margin-bottom:0px">Costs</p></div> -->
+ <br><br>
+
+</div>
+<br>
+
+</section>
+
+<!-- How RADIENT Can Help -->
+<!-- <section class="landing-section-web" id="use">
+ <div class="container-fluid text-center" style="background-color:#f2f8ff;"><br><br><div style="text-align:center"><h3-web>Designed For</h3-web></div><br>
+ <div class="row"><div class="col-md-offset-1 col-md-4"><h2-web style="font-size:20px; text-transform:uppercase;">Investors</h2-web><p style="margin-top:2%; padding-bottom:0%">Discover new funds & reduce costs by unlocking data from fund documents</p></div>
+  <div class="col-md-offset-2 col-md-4"><h2-web style="font-size:20px; text-transform:uppercase;">Allocators</h2-web><p style="margin-top:2%; padding-bottom:0%">Construct better portfolios & review performance securely with clients</p></div></div>
+ <div class="row"><div class="col-md-offset-1 col-md-4"><h2-web style="font-size:20px; text-transform:uppercase;">Advisers</h2-web><p style="margin-top:2%; padding-bottom:0%">Develop visual institutional quality presentations for prospects & clients</p></div>
+  <div class="col-md-offset-2 col-md-4"><h2-web style="font-size:20px; text-transform:uppercase;">Investor Relations</h2-web><p style="margin-top:2%; padding-bottom:0%">Share returns, analysis & ideas with investors while satisfying compliance</p></div></div><br><br></div>
+</section>
+ -->
+
+<!-- FEATURES -->
+<section class="landing-section-web"  id="features">
+
+	<div class="container-fluid">
+	<div style="text-align:center"><h3-web>Services</h3-web></div><br>
+
+	<p style="margin-top: 20px; text-align:center;">Our customized offerings combine advanced algorithms and data acquisition techniques with industry expertise</p><br>
+
+	<div class="row" style="margin-bottom:2%;">
+
+    <div class="col-md-5" style="display:block;">
+      <div class="box1">
+        <div class="feature-header">FIND AND TRACK INVESTMENTS THROUGH NEWS & SOCIAL</div>
+        <br>
+        <p style="margin-bottom:0px; font-size:20px;">Turn news and social media feeds into information by identifying opportunities, map critical market moves, and isolate themes</p>
+        <br>
+        <p style="margin-bottom:0px; font-size:16px;">Mine news reports and social media through advanced natural language processing (NLP) techniques that machine read all available content. Enrich data provided by prospects and portfolio companies for an extra analytical edge.</p>
+        <br>
+        <a href="http://riskadvisorsinc.com/clients/s-executive-departures" class="learn-more">LEARN MORE</a>
+      </div>
+      <br>
+    </div>
+
+		<div class="col-md-5" style="display:block;">
+		  <div class="box1">
+		  	<div class="feature-header">UNDERSTAND YOUR CUSTOMER</div>
+		  	<br>
+		  	<p style="margin-bottom:0px; font-size:20px; ">Analyze transaction data to identify key drivers that impact customer behavior</p>
+		  	<br>
+		  	<p style="margin-bottom:0px; font-size:16px;">Our CRM analytics techniques can aid due diligence efforts of PE firms and help increase bottom line performance of companies by personalizing customer communication and increase customer retention and profitability</p>
+		  	<br>
+		  	<div class="box">
+		  	<a href="http://riskadvisorsinc.com/clients/s-crm-analytics" class="learn-more">LEARN MORE</a>
+		  	</div>
+		  </div>
+		  <br>
+		</div>
+
+	</div>
+
+	<div class="row" style="margin-bottom:2%;">
+
+    <div class="col-md-5" style="display:block;">
+      <div class="box1">
+      <div class="feature-header">STRESS TEST INVESTMENTS</div>
+      <br>
+      <p style="margin-bottom:0px; font-size:20px; ">Flexible pricing tools to set target prices to maximize revenue</p>
+      <br>
+      <p style="margin-bottom:0px; font-size:16px;">Enable management teams to visualize the impact of pricing decisions on the bottom line with the help of simulation techniques. Identify break even points and optimize target price suggestions to maximize revenue</p>
+      <br>
+      <a href="http://riskadvisorsinc.com/clients/s-stress-test-investment" class="learn-more">LEARN MORE</a>
+      </div>
+      <br>
+    </div>
+
+    <div class="col-md-5" style="display:block;">
+      <div class="box1">
+        <div class="feature-header">GAUGE COMPANY PERCEPTION</div>
+        <br>
+        <p style="margin-bottom:0px; font-size:20px;">Distinguish company strengths from its peer group through the eyes of the consumer</p>
+        <br>
+        <p style="margin-bottom:0px; font-size:16px;">Supplement existing data with primary research to understand the customer view and behavioural profiles to evaluate brand value proposition amongst competitors</p>
+        <br>
+        <a href="http://riskadvisorsinc.com/clients/s-survey-analytics" class="learn-more">LEARN MORE</a>
+      </div>
+      <br>
+    </div>
+
+	</div>
+
+	<div class="row" style="margin-bottom:2%;">
+
+    <div class="col-md-5" style="display:block;">
+      <div class="box1">
+      <div class="feature-header">MAXIMIZE SALES OPPORTUNITIES</div>
+      <br>
+      <p style="margin-bottom:0px; font-size:20px;">Utilize recommendation models to identify sales leads by examining purchasing patterns</p>
+      <br>
+      <p style="margin-bottom:0px; font-size:16px;">Develop customized and targeted sales process to increase likelihood of closing new business and identify up-sell and cross-sell opportunities with the existing client base</p>
+      <br>
+      <a href="http://riskadvisorsinc.com/clients/s-recommendation-engine" class="learn-more">LEARN MORE</a>
+      </div>
+      <br>
+    </div>
+
+
+		<div class="col-md-5" style="display:block;">
+		  <div class="box1">
+			<div class="feature-header">AUTOMATE INVESTOR REPORTING</div>
+			<br>
+			<p style="margin-bottom:0px; font-size:20px;">Analyzing, simplifying and automating internal GP & LP reporting processes</p>
+			<br>
+			<p style="margin-bottom:0px; font-size:16px;">Use technology to minimize error and reduce human effort in repetitive accounting tasks.</p>
+			<br>
+			<a href="http://riskadvisorsinc.com/clients/s-investor-reporting" class="learn-more">LEARN MORE</a>
+		  </div>
+		  <br>
+		</div>
+
+	</div>
+
+   	</div><br>
+
+</section>
+
+<!-- HOW WE DO IT -->
+<section class="landing-section-web">
+
+	<div class="container-fluid text-center" style="background-color:#fff8f3;"><br><br>
+	<div style="text-align:center"><h3-web>Designed For</h3-web></div><br>
+
+ <div class="row">
+
+	 <div class="col-md-offset-1 col-md-4">
+	 <h2-web style="font-size:20px; text-transform:uppercase;">Deal Origination</h2-web><p style="margin-top:2%; padding-bottom:0%">Identify potential targets by screening news feeds, social media, and regulatory filings</p>
+	 </div>
+
+	 <div class="col-md-offset-2 col-md-4">
+	 <h2-web style="font-size:20px; text-transform:uppercase;">Due Diligence</h2-web><p style="margin-top:2%; padding-bottom:0%">Better deal decisions through in-depth analysis of portfolio company data and simulations of potential outcomes</p>
+	 </div>
+
+ </div>
+
+ <div class="row">
+
+ 	<div class="col-md-offset-1 col-md-4">
+ 	<h2-web style="font-size:20px; text-transform:uppercase;">Ongoing Value Addition</h2-web><p style="margin-top:2%; padding-bottom:0%">Maximize portfolio company revenue through better pricing and customer centric marketing strategies</p>
+ 	</div>
+
+  	<div class="col-md-offset-2 col-md-4">
+  	<h2-web style="font-size:20px; text-transform:uppercase;">Finance and IT</h2-web><p style="margin-top:2%; padding-bottom:0%">Automate periodic portfolio valuations, carry calculations, and dissemination of information to LPs and GPs</p>
+  	</div>
+
+ </div>
+
+<!-- 	<div class="row">
+
+	  <div class="col-sm-4"><img class="grid-image" src="images/speed.png" alt="Speed" /><br><h2-web style="font-size:20px; text-transform:uppercase;">Speed</h2-web><p style="margin-top:2%">Analyze Data & Test Hypothesis Quickly</p></div>
+	  <div class="col-sm-4"><img class="grid-image" src="images/BigData.png" alt="Big Data" /><br><h2-web style="font-size:20px; text-transform:uppercase;">Big Data Advantage</h2-web><p style="margin-top:2%">Leverage Traditional Financial Data & New Sources of Unstructured Information</p></div>
+	  <div class="col-sm-4"><img class="grid-image" src="images/Models.png" alt="Models" /><br><h2-web style="font-size:20px; text-transform:uppercase;">Proprietary Models & Dashboards</h2-web><p style="margin-top:2%">Customized Cloud-Based Solutions for Simplified Access</p></div>
+
+  	</div>
+
+	<div class="row">
+
+	  <div class="col-sm-4"><img class="grid-image" src="images/Visualizations.png" alt="Visualizations" /><br><h2-web style="font-size:20px; text-transform:uppercase;">Interactive Visualizations</h2-web><p style="margin-top:2%">Interactive Analytic Tools to Uncover Trends in Disconnected Data</p></div>
+	  <div class="col-sm-4"><img class="grid-image" src="images/Decision.png" alt="Decision Making" /><br><h2-web style="font-size:20px; text-transform:uppercase;">Decision Making Enabled</h2-web><p style="margin-top:2%">Decision Making Framework with Predictive Tools</p></div>
+	  <div class="col-sm-4"><img class="grid-image" src="images/DS.png" alt="Advanced ML" /><br><h2-web style="font-size:20px; text-transform:uppercase;">Advanced Data Science</h2-web><p style="margin-top:2%">Sophisticated algorithms to support each stage of the investment life cycle</p></div>
+
+	</div>
+ -->
+	<br><br>
+	</div>
+	<br>
+
+</section>
+
+
+<!-- HOW WE DO IT -->
+
+<section class="landing-section-web">
+
+	<div class="container-fluid text-center">
+	<div style="text-align:center"><h3-web>Features</h3-web></div><br>
+
+	<div class="row">
+
+	  <div class="col-sm-4"><img class="grid-image" src="images/s-speed.png" alt="Speed" /><br><h2-web style="font-size:20px; text-transform:uppercase;">Speed</h2-web><p style="margin-top:2%">Analyze Data & Test Hypothesis Quickly</p></div>
+	  <div class="col-sm-4"><img class="grid-image" src="images/s-big-data.png" alt="Big Data" /><br><h2-web style="font-size:20px; text-transform:uppercase;">Big Data Advantage</h2-web><p style="margin-top:2%">Leverage Traditional Financial Data & New Sources of Unstructured Information</p></div>
+	  <div class="col-sm-4"><img class="grid-image" src="images/s-models.png" alt="Models" /><br><h2-web style="font-size:20px; text-transform:uppercase;">Proprietary Models & Dashboards</h2-web><p style="margin-top:2%">Customized Cloud-Based Solutions for Simplified Access</p></div>
+
+  	</div>
+
+	<div class="row">
+
+	  <div class="col-sm-4"><img class="grid-image" src="images/s-visualizations.png" alt="Visualizations" /><br><h2-web style="font-size:20px; text-transform:uppercase;">Interactive Visualizations</h2-web><p style="margin-top:2%">Interactive Analytic Tools to Uncover Trends in Disconnected Data</p></div>
+	  <div class="col-sm-4"><img class="grid-image" src="images/s-decision.png" alt="Decision Making" /><br><h2-web style="font-size:20px; text-transform:uppercase;">Decision Making Enabled</h2-web><p style="margin-top:2%">Decision Making Framework with Predictive Tools</p></div>
+	  <div class="col-sm-4"><img class="grid-image" src="images/s-ds.png" alt="Advanced ML" /><br><h2-web style="font-size:20px; text-transform:uppercase;">Advanced Data Science</h2-web><p style="margin-top:2%">Sophisticated algorithms to support each stage of the investment life cycle</p></div>
+
+	</div>
+
+	<br><br>
+	</div>
+	<br>
+</section>
+
+
+<!-- PRICING -->
+<section class="landing-section-web" id="pricing" style="padding-bottom: 0px">
+
+  <div class="container-fluid" style="background-color:#fff8f3;"><br><br>
+
+  <div style="text-align:center"><h3-web>Other Case Studies</h3-web></div><br><br>
+
+	<div class="row">
+
+		<div class="col-md-5" style="display:block; background-color: #fff; padding:0%;">
+      <a href="http://riskadvisorsinc.com/clients/s-customer-churn" style="text-decoration:none;">
+        <div class="box2">
+         <p style="margin-bottom:0px;">Customer Churn Analysis</p>
+		  </div></a>
+    </div>
+
+		<div class="col-md-5" style="display:block; background-color: #fff; padding:0%;">
+		  <a href="http://riskadvisorsinc.com/clients/s-trade-market-impact" style="text-decoration:none;">
+       <div class="box2">
+		    <p  style="margin-bottom:0px;">Trade Market Impact Dashboard</p>
+		  </div></a>
+		</div>
+
+	</div>
+
+	<div class="row">
+
+		<div class="col-md-5" style="display:block; background-color: #fff; padding:0%;">
+      <a href="http://riskadvisorsinc.com/clients/s-insurance-valuation" style="text-decoration:none;">
+       <div class="box2">
+  		  <p style="margin-bottom:0px;">Insurance Settlement Valuation</p>
+		  </div></a>
+		</div>
+
+		<div class="col-md-5" style="display:block; background-color: #fff; padding:0%;">
+      <a href="http://riskadvisorsinc.com/clients/s-pricing-competitor-response"  style="text-decoration:none;">
+       <div class="box2">
+		   <p style="margin-bottom:0px;">Pricing Competitor Response Simulator</p>
+		  </div></a>
+		</div>
+
+	</div>
+
+<!-- 	<div class="row">
+
+		<div class="col-md-5" style="display:block; background-color: #fff; border:1px solid #5d80ab;">
+		  <div class="box1">
+  		  <a href="http://riskadvisorsinc.com/clients/pricing-tool-case-study" class="learn-more" style="border-color: #82a0be; font-size: 20px; color: #82a0be;">Predicting Customer Lifetime Value</a>
+		  </div>
+		</div>
+
+		<div class="col-md-5" style="display:block; background-color: #fff; border:1px solid #5d80ab;">
+		  <div class="box1">
+		  <a href="http://riskadvisorsinc.com/clients/pricing-tool-case-study" class="learn-more" style="border-color: #82a0be; font-size: 20px; color: #82a0be;">Sales Opportunities Through Recommendation Models</a>
+		  </div>
+		</div>
+
+	</div>
+ -->
+ <br><br>
+<br>
+
+  </div>
+
+</section>
+
+
+
+<!-- FOOTER -->
+<footer>
+ <div class="container-fluid" id="form" style="font-size:12px; background-color:#343434; color:#fff; border-top:1px solid #4e4e4e;">
+
+	  <div class="col-sm-4 col-xs-3" align="left" style="padding-right:0px; padding-left:0">
+
+	   <p style="margin-top:3%; margin-bottom:3px"><a href="/" style="color:#64ABFC; text-decoration:none; cursor:pointer">Home</a></p>
+	   <p style="margin-bottom:3px; margin-top:3%"><a href="#about" style="color:#64ABFC; text-decoration:none; cursor:pointer">About</a></p>
+	   <p style="margin-bottom:3px; margin-top:3%"><a href="#features" style="color:#64ABFC; text-decoration:none; cursor:pointer">Services</a></p>
+	   <p style="margin-bottom:3px; margin-top:3%"><a href="#pricing" style="color:#64ABFC; text-decoration:none; cursor:pointer">Case Studies</a></p>
+	   <!-- <p style="margin-bottom:3px"><a href="https://radientanalytics.com/app/" style="color:#64ABFC; text-decoration:none; cursor:pointer">Login</a></p>
+	  -->
+<!-- 	   <p style="margin-bottom:3px"><a href="#form" style="color:#64ABFC; text-decoration:none; cursor:pointer">Sign Up</a></p>
+ -->
+	  </div>
+
+	  <div class="col-sm-4 col-xs-5" align="middle" style="padding-right:0px; padding-left:0px"><br><br>
+
+	   <p style="margin-bottom:3px"><span class="glyphicon glyphicon-envelope"></span> <a href="mailto:info@riskadvisorsinc.com" style="color:#64ABFC; text-decoration:none; cursor:pointer">info@riskadvisorsinc.com</a></p>
+	   <p style="margin-bottom:3px"><span class="glyphicon glyphicon-earphone"></span>+1 (212) 726 2388</p><a href="/" title="To Top"><span class="glyphicon glyphicon-chevron-up" style="color:#64ABFC"></span></a>
+
+	  </div>
+
+	  <div class="col-sm-4 col-xs-4" align="right" style="padding-left:0px; padding-right:0">
+
+	   <p style="margin-bottom:3px; margin-top:3%"><a href="http://riskadvisorsinc.com/" target="_blank" style="color:#64ABFC; text-decoration:none; cursor:pointer">Risk Advisors Inc.</a></p>
+	   <p style="margin-bottom:3px; margin-top:3%"><a href="http://riskadvisorsinc.com/blog" target="_blank" style="color:#64ABFC; text-decoration:none; cursor:pointer">Blog</a></p>
+	   <p style="margin-bottom:3px; margin-top:3%"><a data-toggle="modal" data-target="#disclaimer-modal" style="color:#64ABFC; text-decoration:none; cursor:pointer">Terms of Service</a></p>
+	   <p style="margin-bottom:3px; margin-top:3%">© 2018 Risk Advisors Inc. All Rights Reserved</p>
+
+	  </div>
+
+ </div>
+
+</footer>
+
+<!-- <script type='text/javascript' src='scripts/jquery.js?ver=1.12.4'></script>
+<script type='text/javascript' src='scripts/jquery-migrate.min.js?ver=1.4.1'></script>
+ -->
+
+<!-- TERMS OF SERVICE MODAL -->
+<div class="modal fade" id="disclaimer-modal" role="dialog"><div class="modal-dialog" role"document" style="position:relative; top:50px">
+
+  <!-- Modal content-->
+  <div class="modal-content" style="width:700px;"><div class="modal-header"><button type="button" class="close" data-dismiss="modal">&times;</button><h4 class="modal-title">Terms of Service</h4></div>
+  <div class = "col-md-12" style="margin-top:2%; font-size: 14px"><br>Every attempt has been made to ensure the accuracy and reliability of the information provided on this website.  However, all information is provided "as is" without any expressed or implied warranties of any kind.  Risk Advisors Inc. (“Risk Advisors”) provides no warranties and makes no representation in relation to this website or the information and material provided on this website.
+   <br><br>The calculations and tools on this website are provided for your information and to illustrate scenarios.  Nothing on this website constitutes, or is meant to constitute, advice of any kind.  Risk Advisors will not be liable to you or any other party (whether under the law of contract, the law of torts or otherwise) in relation to the contents of, or use of, or otherwise in connection with, this website.<br><br></div>
+  <div class="modal-footer"><button type="button" class="btn btn-default" data-dismiss="modal">Close</button></div></div></div>
+
+</div>
+
+</body>
+</html>
